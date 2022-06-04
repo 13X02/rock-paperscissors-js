@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rockpaperscissors</title
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <script>
+    const options = ["rock","paper","scissor"];
+    function play(computer,player) {
+        if (computer==player) {
+            alert("Its a tie");
+            return;
+        }else if(computer==="rock"){
+            if (player==="paper") {
+                alert("Player wins");
+            }else{
+                alert("Computer won");
+            }
+        }else if(computer==="paper"){
+            if (player==="scissor") {
+                alert("Player wins");
+            }else{
+                alert("Computer won");
+            }
+        }else if(computer==="scissor"){
+            if (player==="rock") {
+                alert("Player wins");
+            }else{
+                alert("Computer won");
+            }
+        }
+    }
+    function computerPlays() {
+    return options[Math.floor(Math.random()*4)];
+    }
+    function game(){
+        for (let i = 0; i < 5; i++) {
+            let player=prompt("rock , paper or scissors ?").toLowerCase();
+            let computer = computerPlays();
+            play(computer,player);
+            
+        }
+    }
+    game();
+    </script>
+</body>
+</html>
