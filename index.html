@@ -4,49 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rockpaperscissors</title
-    <script src="script.js"></script>
+    <title>rockpaperscissors</title>
+    <link href="style.css"rel="stylesheet">
 
 </head>
 <body>
-    <script>
-    const options = ["rock","paper","scissor"];
-    function play(computer,player) {
-        if (computer==player) {
-            alert("Its a tie");
-            return;
-        }else if(computer==="rock"){
-            if (player==="paper") {
-                alert("Player wins");
-            }else{
-                alert("Computer won");
-            }
-        }else if(computer==="paper"){
-            if (player==="scissor") {
-                alert("Player wins");
-            }else{
-                alert("Computer won");
-            }
-        }else if(computer==="scissor"){
-            if (player==="rock") {
-                alert("Player wins");
-            }else{
-                alert("Computer won!");
-            }
-        }
-    }
-    function computerPlays() {
-    return options[Math.floor(Math.random()*4)];
-    }
-    function game(){
-        for (let i = 0; i < 5; i++) {
-            let player=prompt("rock , paper or scissors ?").toLowerCase();
-            let computer = computerPlays();
-            play(computer,player);
-            
-        }
-    }
-    game();
-    </script>
+        <div class="header">
+            <img src="/images/headerlogov2.png" class="logo">
+            <div class="title">
+                ROCK PAPER SCISSORS
+            </div>
+        </div>
+        <div class="content">
+            <div class="canvas">
+                <h1>Scoreboard</h1>
+                <div class="score"></div>
+                <p id="result">Start the Fight</p>
+            </div>
+            <div class="buttons">
+                <div class="button">
+                    <button class="rock">ROCK</button>
+                </div>
+                <div class="button">
+                    <button class="paper">PAPER</button>
+                </div>
+                <div class="button">
+                    <button class="scissors">SCISSORS</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>Created by O<sub>2</sub></div>
+            <div>Find me on  </div>
+            <div class="social">
+                <div class="icon">
+                    <a>
+                        <img src="">
+                    </a>
+                </div>
+                <div class="icon">
+                    <a>
+                        <img src="">
+                    </a>
+                </div>
+                <div class="icon">
+                    <a>
+                        <img src="">
+                    </a>
+                </div>
+                <div class="icon">
+                    <a>
+                        <img src="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    
 </body>
+<script src="script.js"></script>
 </html>
